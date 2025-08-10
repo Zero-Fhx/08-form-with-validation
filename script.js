@@ -38,6 +38,18 @@ form.addEventListener("submit", function (event) {
   form.reset();
 });
 
+nameInput.addEventListener("input", () => {
+  nameError.textContent = "";
+});
+
+emailInput.addEventListener("input", () => {
+  emailError.textContent = "";
+});
+
+messageInput.addEventListener("input", () => {
+  messageError.textContent = "";
+});
+
 function validate(name, email, message) {
   let isValid = true;
 
