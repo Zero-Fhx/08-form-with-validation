@@ -35,7 +35,7 @@
             <textarea id="message" name="message" required></textarea>
             <span class="error-message" id="message-error"></span>
           </div>
-          <button class="send" type="submit">Enviar</button>
+          <button class="send-button" type="submit">Enviar</button>
         </form>
       </div>
       <div class="container">
@@ -43,19 +43,71 @@
         <div id="messages">
           <!-- Los mensajes enviados se mostrarán aquí -->
           <!-- Example -->
-          <div class="message unread">
-            <h3>name</h3>
-            <p>email</p>
-            <p>message-preview</p>
-            <button>Marcar como leído</button>
-            <button>Eliminar</button>
+          <div
+            id="numberId"
+            class="message unread"
+            onclick="openMessage(numberId)"
+          >
+            <div class="content">
+              <div class="author">
+                <h3>aaaaaa</h3>
+                <p>email@mail.com</p>
+              </div>
+              <div class="message-preview">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                tenetur fugiat libero expedita numquam enim inventore quisquam
+                esse, atque maxime unde quod dolorem neque incidunt at sequi
+                reprehenderit voluptates modi!
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="read-button">Marcar como leído</button>
+              <button class="delete-button">Eliminar</button>
+            </div>
           </div>
-          <div class="message read">
-            <h3>name</h3>
-            <p>email</p>
-            <p>message-preview</p>
-            <button>Marcar como no leído</button>
-            <button>Eliminar</button>
+          <div
+            id="numberId"
+            class="message read"
+            onclick="openMessage(numberId)"
+          >
+            <div class="content">
+              <div class="author">
+                <h3>leido</h3>
+                <p>email</p>
+              </div>
+              <div class="message-preview">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+                impedit incidunt natus excepturi, sunt pariatur nobis facere
+                sequi dolorem totam laudantium! Ipsam placeat, at dolor eos odit
+                quia aliquam porro!
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="unread-button">Marcar como no leído</button>
+              <button class="delete-button">Eliminar</button>
+            </div>
+          </div>
+          <div
+            id="numberId"
+            class="message unread"
+            onclick="openMessage(numberId)"
+          >
+            <div class="content">
+              <div class="author">
+                <h3>no leido</h3>
+                <p>email</p>
+              </div>
+              <div class="message-preview">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloribus unde, ipsum distinctio sapiente deleniti, quis ex
+                recusandae eos aut vitae obcaecati et, ea quas facilis fugiat ad
+                veritatis enim animi.
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="read-button">Marcar como leído</button>
+              <button class="delete-button">Eliminar</button>
+            </div>
           </div>
         </div>
       </div>
