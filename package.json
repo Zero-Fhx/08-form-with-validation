@@ -1,0 +1,25 @@
+{
+  "name": "08-form-with-validation",
+  "version": "1.0.0",
+  "description": "Un formulario de contacto avanzado con validación completa y gestión de mensajes desarrollado con HTML, CSS y JavaScript vanilla. Este es el **Proyecto #8** de mi serie de proyectos de desarrollo web.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zero-Fhx/08-form-with-validation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Zero-Fhx/08-form-with-validation/issues"
+  },
+  "homepage": "https://github.com/Zero-Fhx/08-form-with-validation#readme",
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "standard": "^17.1.2"
+  }
+}
