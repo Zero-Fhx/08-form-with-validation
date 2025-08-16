@@ -143,76 +143,76 @@ Este proyecto incluye todas las características esenciales de un formulario con
 ### Validación Completa de Formulario
 
 ```javascript
-function validate(name, email, message) {
-  let isValid = true;
+function validate (name, email, message) {
+  let isValid = true
 
-  if (name === "") {
-    nameError.textContent = "El nombre es obligatorio.";
-    isValid = false;
+  if (name === '') {
+    nameError.textContent = 'El nombre es obligatorio.'
+    isValid = false
   }
 
-  if (email === "") {
-    emailError.textContent = "El correo electrónico es obligatorio.";
-    isValid = false;
+  if (email === '') {
+    emailError.textContent = 'El correo electrónico es obligatorio.'
+    isValid = false
   } else if (!validateEmail(email)) {
-    emailError.textContent = "El correo electrónico no es válido.";
-    isValid = false;
+    emailError.textContent = 'El correo electrónico no es válido.'
+    isValid = false
   }
 
-  if (message === "") {
-    messageError.textContent = "El mensaje es obligatorio.";
-    isValid = false;
+  if (message === '') {
+    messageError.textContent = 'El mensaje es obligatorio.'
+    isValid = false
   }
 
-  return isValid;
+  return isValid
 }
 ```
 
 ### Validación de Email con RegEx
 
 ```javascript
-function validateEmail(email) {
-  const emailPattern = /^[-a-zAZ0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  return emailPattern.test(email);
+function validateEmail (email) {
+  const emailPattern = /^[-a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+  return emailPattern.test(email)
 }
 ```
 
 ### Gestión de Estado de Mensajes
 
 ```javascript
-function sendMessage(name, email, message) {
-  messagesId++;
+function sendMessage (name, email, message) {
+  messagesId++
   messages[messagesId] = {
     id: messagesId,
-    name: name,
-    email: email,
-    message: message,
-    read: false,
-  };
+    name,
+    email,
+    message,
+    read: false
+  }
 
-  displayMessage(messages[messagesId]);
-  checkMessages();
-  saveMessagesToLocalStorage();
+  displayMessage(messages[messagesId])
+  checkMessages()
+  saveMessagesToLocalStorage()
 }
 ```
 
 ### Persistencia con localStorage
 
 ```javascript
-function saveMessagesToLocalStorage() {
-  localStorage.setItem("messages", JSON.stringify(messages));
+function saveMessagesToLocalStorage () {
+  localStorage.setItem('messages', JSON.stringify(messages))
 }
 
-function loadMessagesFromLocalStorage() {
-  const storedMessages = localStorage.getItem("messages");
+function loadMessagesFromLocalStorage () {
+  const storedMessages = localStorage.getItem('messages')
   if (storedMessages) {
-    messages = JSON.parse(storedMessages);
+    messages = JSON.parse(storedMessages)
   }
 
   messagesId =
     Object.keys(messages).length > 0
       ? Math.max(...Object.keys(messages).map(Number))
-      : 0;
+      : 0
 }
 ```
 
@@ -242,9 +242,9 @@ function loadMessagesFromLocalStorage() {
 ### Creación Dinámica de Elementos
 
 ```javascript
-function displayMessage(message) {
-  const messageElement = document.createElement("div");
-  messageElement.classList.add("message");
+function displayMessage (message) {
+  const messageElement = document.createElement('div')
+  messageElement.classList.add('message')
 
   messageElement.innerHTML = `
     <div class="content">
@@ -258,7 +258,7 @@ function displayMessage(message) {
       <button class="read-button">${readButtonText}</button>
       <button class="delete-button">Eliminar</button>
     </div>
-  `;
+  `
 }
 ```
 
